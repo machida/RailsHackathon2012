@@ -1,0 +1,167 @@
+@charset "UTF-8"
+@import compass/reset
+@import compass/utilities
+@import compass/css3
+@import yui_fonts
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400,700)
+@import url(http://fonts.googleapis.com/css?family=Anton)
+
+=wrap
+  width: 960px
+  margin: 0 auto
+
+body
+  background: url(/images/body.gif)
+  color: #fff
+#header
+  margin: 38px 0 0 0
+  +clearfix
+  #eyecatch
+    +wrap
+    background: url(/images/eyecatch.png) left top no-repeat
+    height: 260px
+    position: relative
+    z-index: 9
+    &:after
+      content: ""
+      background: url(/images/palm_trees.png) no-repeat
+      display: block
+      width: 120px
+      height: 106px
+      position: absolute
+      z-index: 10
+      bottom: -70px
+    hgroup
+      padding: 0 0 0 420px    
+      h1
+        text-align: center
+        font:
+          family: 'Vollkorn', serif
+          weight: bold
+        span
+          display: block
+          line-height: 1.1
+        .name
+          font:
+            size: 58px
+        .conjunction
+          font:
+            size: 38px
+        .place
+          font:
+            size: 64px
+      h2
+        text-align: center
+        font:
+          size: 38px
+          weight: bold
+          family: 'Anton', sans-serif
+        color: rgba(0, 0, 0, .5)
+  #communities
+    height: 68px
+    background: url(/images/header.gif) left bottom repeat-x
+    .list
+      +wrap
+      ul
+        float: right
+        padding: 10px 0 0 0
+        li
+          +inline-block
+          margin: 0 0 0 20px
+          a
+            text:
+              decoration: none
+            font:
+              size: $size-18px
+              weight: bold
+            color: #146984
+          
+#global
+  background: rgba(0, 0, 0, .2)
+  height: 62px
+  ul
+    +wrap
+    +clearfix
+    position: relative
+    li
+      +inline-block
+      padding: 16px 0 0 0
+      a
+        color: #000
+        text-decoration: none
+        padding: 0 14px
+        line-height: 36px
+        display: block
+        vertical-align: middle
+        font:
+          family: 'Vollkorn', serif
+          size: $size-26px
+          weight: bold
+        +border-radius(4px)
+        &:hover
+          background: rgba(0, 0, 0, .1)
+        &:active
+          background: rgba(0, 0, 0, .2)
+          +box-shadow(rgba(0, 0, 0, .4) 0 1px 1px inset, rgba(255, 255, 255, .1) 0 1px 1px)
+      &.registar
+        position: absolute
+        right: 0
+        top: -6px
+        a
+          background: #666
+          line-height: 38px
+          height: 38px
+          padding: 4px 0 0 0
+          +box-shadow(rgba(0, 0, 0, .4) 0 1px 2px, rgba(255, 255, 255, .9) 0 1px 1px inset)
+          color: #6f0303
+          +text-shadow(rgba(255, 255, 255, .4) 0 -1px 0)
+          width: 200px
+          text-align: center
+          font:
+            size: 30px
+          position: relative
+          background-color: rgb(255,253,165)
+          @include filter-gradient(#fffda5, #e5e239, vertical)
+          $experimental-support-for-svg: true
+          @include background-image(linear-gradient(top,  rgba(255,253,165,1) 0%,rgba(252,248,126,1) 50%,rgba(246,244,72,1) 50%,rgba(229,226,57,1) 100%))
+          &:after
+            content: ""
+            background: rgba(255, 255, 255, .4)
+            height: 22px
+            width: 196
+            position: absolute
+            left: 2px
+            top: 2px
+            display: block
+            z-index: 2
+#content
+  +wrap
+  padding: 30px 0
+  +clearfix
+  #main
+    width: 600px
+    float: left
+    h1
+      font:
+        size: 36px
+        weight: bold
+        family: 'Vollkorn', suns-serif
+      margin: 0 0 0.6em 0
+    p
+      font:
+        size: $size-15px
+      line-height: 1.6
+  #sub
+    float: right
+    width: 320px
+#footer
+  clear: both
+  padding: 30px 0
+  +clearfix
+  &:before
+    content: "***********************************************************************************************************************************************************************************************************************************************************************************************"
+    height: 20px
+    display: block
+    overflow: hidden
+    color: #9d1a1a
+    +wrap
